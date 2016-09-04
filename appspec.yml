@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /var/www/html/codedeploy_sample
+     destination: /var/www/html/codedeploy-sample
 permissions:
-   - object: /var/www/html/codedeploy_sample
+   - object: /var/www/html/codedeploy-sample
      pattern: "**"
      owner: www-data
      group: www-data
