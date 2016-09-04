@@ -1,18 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
-hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
+   - source: /
+     destination: /var/www/html/codedeploy_sample
+permissions:
+   - object: /var/www/html/codedeploy_sample
+     pattern: "**"
+     owner: www-data
+     group: www-data
+     mode: 755
+     type:
+     overwrite: yes
+       - file
 
